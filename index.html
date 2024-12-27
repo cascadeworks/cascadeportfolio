@@ -4,86 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stress-Free Moving</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <header id="navbar">
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#story">Services</a></li>
-                <li><a href="#features">Pricing</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+    <header id="navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#hero">Moving Service</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#story">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
             </ul>
-        </nav>
-        <div class="chat-button"><i class="fas fa-comment"></i> Chat Now</div>
+        </div>
+        <div class="chat-button btn btn-primary ml-3"><i class="fas fa-comment"></i> Chat Now</div>
     </header>
 
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
+    <section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('moving-day.jpg'); height: 100vh; background-size: cover;">
+        <div>
             <h1>Your Journey Starts Here: Stress-Free Moving Awaits You</h1>
             <p>Professional moving services tailored for your busy life.</p>
-            <button class="cta-button">Start Your Move Now</button>
+            <button class="btn btn-warning btn-lg">Start Your Move Now</button>
         </div>
-        <div class="scroll-cue"><i class="fas fa-chevron-down"></i></div>
+        <div class="scroll-cue mt-4"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
 
-    <section id="story" class="story-section">
-        <h2>From Chaos to Calm</h2>
-        <div class="story-card">
-            <div class="before-after">
-                <img src="before.jpg" alt="Before Moving Day" class="before-image">
-                <img src="after.jpg" alt="After Moving Day" class="after-image">
+    <section id="story" class="story-section py-5">
+        <div class="container text-center">
+            <h2>From Chaos to Calm</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="before.jpg" alt="Before Moving Day" class="img-fluid mb-3">
+                    <p>Before: Messy moving day</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="after.jpg" alt="After Moving Day" class="img-fluid mb-3">
+                    <p>After: Organized and happy.</p>
+                </div>
             </div>
-            <p>Before: Messy moving day<br>After: Organized and happy.</p>
             <blockquote>"This service saved my sanity!" - Sarah</blockquote>
+            <video controls autoplay muted src="testimonial.mp4" class="mt-3"></video>
+            <div class="progress mt-3">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
         </div>
-        <video controls autoplay muted src="testimonial.mp4"></video>
-        <div class="progress-bar"><span style="width: 60%;"></span></div>
     </section>
 
-    <section id="features" class="features-section">
-        <h2>Why Zero-Stress Moving?</h2>
-        <div class="icon-grid">
-            <div class="icon-item" title="On-time Service"><i class="fas fa-clock"></i></div>
-            <div class="icon-item" title="Insurance Guarantee"><i class="fas fa-shield-alt"></i></div>
-            <!-- Add more icons as needed -->
+    <section id="features" class="features-section py-5 bg-light">
+        <div class="container text-center">
+            <h2>Why Zero-Stress Moving?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="icon-item h-100 p-3 border rounded bg-white text-center">
+                        <i class="fas fa-clock fa-3x mb-2"></i>
+                        <h5>On-time Service</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="icon-item h-100 p-3 border rounded bg-white text-center">
+                        <i class="fas fa-shield-alt fa-3x mb-2"></i>
+                        <h5>Insurance Guarantee</h5>
+                    </div>
+                </div>
+                <!-- Add more icons as needed -->
+            </div>
+            <h3>Save Time, Save Money</h3>
+            <!-- Add more benefits here -->
         </div>
-        <h3>Save Time, Save Money</h3>
-        <!-- Add more benefits here -->
     </section>
 
-    <section id="estimator" class="estimator-section">
-        <h2>Plan Your Move</h2>
-        <form id="cost-estimator">
-            <select name="distance">
-                <option value="">Select Distance</option>
-                <!-- Options -->
-            </select>
-            <!-- More fields -->
-            <button type="submit">Get Estimate</button>
-        </form>
-        <!-- Dynamic Pricing Box -->
+    <section id="estimator" class="estimator-section py-5">
+        <div class="container text-center">
+            <h2>Plan Your Move</h2>
+            <form id="cost-estimator" action="#" method="#" class="">
+                <!-- Form Fields -->
+                <select name="" id="" required="" class="">
+                    <!-- Options -->
+                    <option value="">Select Distance</option>
+                </select>
+
+                <!-- More fields -->
+                <!-- Dynamic Pricing Box -->
+                <button type="" submit="" value="" name="" id="" required="" placeholder="">Get Estimate</button>
+
+            </form>
+
+        </div>
     </section>
 
-    <section id="social-proof" class="social-proof-section">
+    <section id="social-proof" class="social-proof-section py-5 bg-light text-center">
         <h2>Join the Community of Stress-Free Movers</h2>
         <!-- Client Logos and Stats -->
     </section>
 
-    <footer id="contact">
-        <p>Your Next Chapter Starts Today!</p>
-        <button onclick="location.href='#estimator'">Get Your Free Quote</button>
-        <button onclick="location.href='contact.html'">Speak with a Specialist</button>
+    <footer id="#contact" class="">
         <!-- Contact Info -->
+        <!-- Buttons and Reassurance Statement -->
+        <!-- Optional Countdown Timer and Popup Form can be added here -->
     </footer>
 
-    <!-- Countdown Timer and Popup Form can be added here -->
-
-    <script src="script.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src=https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js></script> 
+    <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js></script> 
+    <!-- Custom JS -->
+    <script src='script.js'></script>
 
 </body>
 </html>
@@ -93,34 +125,21 @@
 body {
     font-family: Arial, sans-serif;
 }
-.hero-section {
-    background-image: url('moving-day.jpg');
-    height: 100vh;
-    color: white;
-}
-.cta-button {
-    background-color: #ff5722;
-}
 .scroll-cue {
     position: absolute;
     bottom: 20px;
 }
-.icon-grid {
-    display: flex;
-}
-.icon-item {
-    flex: 1;
-}
 .chat-button {
     position: fixed;
 }
-.progress-bar {
-    background-color: #f3f3f3;
+.progress {
+    height: 20px;
 }
-.progress-bar span {
-    display: block;
-    height: 5px;
-    background-color: #4caf50;
+.icon-item {
+    transition: transform 0.3s;
+}
+.icon-item:hover {
+    transform: scale(1.05);
 }
 </style>
 
