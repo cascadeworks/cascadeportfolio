@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Delivery Service</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
 </head>
 <body>
 
@@ -33,6 +33,8 @@
         <section id="products" class="mb-5">
             <h2 class="text-center">Our Products</h2>
             <div class="row">
+                <!-- Product Cards -->
+                <!-- Repeat for each product -->
                 <div class="col-md-4 product" data-name="Pizza" data-price="10">
                     <div class="card mb-4 shadow-sm border-primary">
                         <img src="images/pizza.jpg" class="card-img-top rounded-top" alt="">
@@ -45,29 +47,8 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 product" data-name="Burger" data-price="8">
-                    <div class="card mb-4 shadow-sm border-primary">
-                        <img src="images/burger.jpg" class="card-img-top rounded-top" alt="">
-                        <div class="card-body bg-light text-dark">
-                            <h5 class="card-title font-weight-bold">Burger</h5>
-                            <p class="card-text">Juicy beef burger.</p>
-                            <p class="card-text"><strong>Price: $8</strong></p>
-                            <button class="order-btn btn btn-primary">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 product" data-name="Sushi" data-price="15">
-                    <div class="card mb-4 shadow-sm border-primary">
-                        <img src="images/sushi.jpg" class="card-img-top rounded-top" alt="">
-                        <div class="card-body bg-light text-dark">
-                            <h5 class="card-title font-weight-bold">Sushi</h5>
-                            <p class="card-text">Fresh sushi rolls.</p>
-                            <p class="card-text"><strong>Price: $15</strong></p>
-                            <button class="order-btn btn btn-primary">Order Now</button>
-                        </div>
-                    </div>
-                </div>
+                <!-- Add more products similarly -->
+                
             </div>
         </section>
 
@@ -88,3 +69,26 @@
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" min="1" required value="1" class="form-control">
                 </div>
+
+                <button type="submit" class="btn btn-success">Submit Order</button>
+            </form>
+
+            <div id='order-message' class='alert alert-info mt-3' style='display:none;'></div>
+        </section>
+
+    </main>
+
+    <footer class='text-center py-3 bg-primary text-white'>
+        &copy; 2024 Quick Delivery Service
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Include jQuery first -->
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script> 
+    <!-- Then include Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js'></script> 
+    <!-- Your custom script -->
+    <script src='script.js'></script>
+
+</body>
+</html>
