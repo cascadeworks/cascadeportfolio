@@ -2,6 +2,19 @@ body {
     font-family: Arial, sans-serif;
 }
 
+header {
+    background-color: #007bff;
+}
+
+.navbar {
+    margin: 20px 0;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+}
+
 .card {
     transition: transform 0.2s;
 }
@@ -17,12 +30,4 @@ footer {
 
 .bg-light {
     background-color: #f8f9fa !important;
-}
-
-.text-primary {
-    color: #007bff !important;
-}
-
-.shadow-lg {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
