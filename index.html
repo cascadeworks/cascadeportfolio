@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Delivery Service</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
 </head>
 <body>
 
     <header class="bg-primary text-white text-center py-4">
         <h1>Quick Delivery Service</h1>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#order">Order Now</a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#home">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#order">Order Now</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -33,8 +40,6 @@
         <section id="products" class="mb-5">
             <h2 class="text-center">Our Products</h2>
             <div class="row">
-                <!-- Product Cards -->
-                <!-- Repeat for each product -->
                 <div class="col-md-4 product" data-name="Pizza" data-price="10">
                     <div class="card mb-4 shadow-sm border-primary">
                         <img src="images/pizza.jpg" class="card-img-top rounded-top" alt="">
@@ -47,48 +52,21 @@
                     </div>
                 </div>
 
-                <!-- Add more products similarly -->
-                
-            </div>
-        </section>
-
-        <section id="order" class="mb-5 bg-light p-4 rounded shadow-sm">
-            <h2>Order Form</h2>
-            <form id="order-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" required class="form-control">
+                <div class="col-md-4 product" data-name="Burger" data-price="8">
+                    <div class="card mb-4 shadow-sm border-primary">
+                        <img src="images/burger.jpg" class="card-img-top rounded-top" alt="">
+                        <div class="card-body bg-light text-dark">
+                            <h5 class="card-title font-weight-bold">Burger</h5>
+                            <p class="card-text">Juicy beef burger.</p>
+                            <p class="card-text"><strong>Price: $8</strong></p>
+                            <button class="order-btn btn btn-primary">Order Now</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="product">Product:</label>
-                    <input type="text" id="product" readonly class="form-control-plaintext bg-white border-0">
-                </div>
-
-                <div class="form-group">
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" min="1" required value="1" class="form-control">
-                </div>
-
-                <button type="submit" class="btn btn-success">Submit Order</button>
-            </form>
-
-            <div id='order-message' class='alert alert-info mt-3' style='display:none;'></div>
-        </section>
-
-    </main>
-
-    <footer class='text-center py-3 bg-primary text-white'>
-        &copy; 2024 Quick Delivery Service
-    </footer>
-
-    <!-- Scripts -->
-    <!-- Include jQuery first -->
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script> 
-    <!-- Then include Bootstrap JS -->
-    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js'></script> 
-    <!-- Your custom script -->
-    <script src='script.js'></script>
-
-</body>
-</html>
+                <div class="col-md-4 product" data-name="Sushi" data-price="15">
+                    <div class="card mb-4 shadow-sm border-primary">
+                        <img src="images/sushi.jpg" class="card-img-top rounded-top" alt="">
+                        <div class="card-body bg-light text-dark">
+                            <h5 class="card-title font-weight-bold">Sushi</h5>
+                            <p class="card-text">Fresh sushi rolls.</p>
