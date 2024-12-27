@@ -3,70 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Delivery Service</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Stress-Free Moving</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <header class="bg-primary text-white text-center py-4">
-        <h1>Quick Delivery Service</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#home">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#order">Order Now</a></li>
-                </ul>
-            </div>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#story">Services</a></li>
+                <li><a href="#features">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
         </nav>
+        <div class="chat-button"><i class="fas fa-comment"></i> Chat Now</div>
     </header>
 
-    <main class="container mt-4">
-        <section id="home" class="text-center mb-5">
-            <h2>Welcome to Quick Delivery Service</h2>
-            <p>Imagine this: It’s a busy Friday evening. You’ve had a long week at work, and all you want is to unwind at home with your favorite meal.</p>
-            <p>But wait! That’s where we come in. At Quick Delivery Service, we believe that your evenings should be filled with relaxation, not stress.</p>
-            <div class="my-4">
-                <img src="images/delivery.jpg" alt="Food Delivery" class="img-fluid rounded shadow-lg">
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Your Journey Starts Here: Stress-Free Moving Awaits You</h1>
+            <p>Professional moving services tailored for your busy life.</p>
+            <button class="cta-button">Start Your Move Now</button>
+        </div>
+        <div class="scroll-cue"><i class="fas fa-chevron-down"></i></div>
+    </section>
+
+    <section id="story" class="story-section">
+        <h2>From Chaos to Calm</h2>
+        <div class="story-card">
+            <div class="before-after">
+                <img src="before.jpg" alt="Before Moving Day" class="before-image">
+                <img src="after.jpg" alt="After Moving Day" class="after-image">
             </div>
-            <p>Picture yourself lounging on the couch, your favorite show playing, when suddenly, there’s a knock at the door. It’s us, delivering a hot, delicious pizza or a juicy burger right to your doorstep!</p>
-            <p>Our mission is simple: to bring you the best meals from local restaurants without you having to lift a finger.</p>
-        </section>
+            <p>Before: Messy moving day<br>After: Organized and happy.</p>
+            <blockquote>"This service saved my sanity!" - Sarah</blockquote>
+        </div>
+        <video controls autoplay muted src="testimonial.mp4"></video>
+        <div class="progress-bar"><span style="width: 60%;"></span></div>
+    </section>
 
-        <section id="products" class="mb-5">
-            <h2 class="text-center">Our Products</h2>
-            <div class="row">
-                <div class="col-md-4 product" data-name="Pizza" data-price="10">
-                    <div class="card mb-4 shadow-sm border-primary">
-                        <img src="images/pizza.jpg" class="card-img-top rounded-top" alt="">
-                        <div class="card-body bg-light text-dark">
-                            <h5 class="card-title font-weight-bold">Pizza</h5>
-                            <p class="card-text">Delicious cheese pizza.</p>
-                            <p class="card-text"><strong>Price: $10</strong></p>
-                            <button class="order-btn btn btn-primary">Order Now</button>
-                        </div>
-                    </div>
-                </div>
+    <section id="features" class="features-section">
+        <h2>Why Zero-Stress Moving?</h2>
+        <div class="icon-grid">
+            <div class="icon-item" title="On-time Service"><i class="fas fa-clock"></i></div>
+            <div class="icon-item" title="Insurance Guarantee"><i class="fas fa-shield-alt"></i></div>
+            <!-- Add more icons as needed -->
+        </div>
+        <h3>Save Time, Save Money</h3>
+        <!-- Add more benefits here -->
+    </section>
 
-                <div class="col-md-4 product" data-name="Burger" data-price="8">
-                    <div class="card mb-4 shadow-sm border-primary">
-                        <img src="images/burger.jpg" class="card-img-top rounded-top" alt="">
-                        <div class="card-body bg-light text-dark">
-                            <h5 class="card-title font-weight-bold">Burger</h5>
-                            <p class="card-text">Juicy beef burger.</p>
-                            <p class="card-text"><strong>Price: $8</strong></p>
-                            <button class="order-btn btn btn-primary">Order Now</button>
-                        </div>
-                    </div>
-                </div>
+    <section id="estimator" class="estimator-section">
+        <h2>Plan Your Move</h2>
+        <form id="cost-estimator">
+            <select name="distance">
+                <option value="">Select Distance</option>
+                <!-- Options -->
+            </select>
+            <!-- More fields -->
+            <button type="submit">Get Estimate</button>
+        </form>
+        <!-- Dynamic Pricing Box -->
+    </section>
 
-                <div class="col-md-4 product" data-name="Sushi" data-price="15">
-                    <div class="card mb-4 shadow-sm border-primary">
-                        <img src="images/sushi.jpg" class="card-img-top rounded-top" alt="">
-                        <div class="card-body bg-light text-dark">
-                            <h5 class="card-title font-weight-bold">Sushi</h5>
-                            <p class="card-text">Fresh sushi rolls.</p>
+    <section id="social-proof" class="social-proof-section">
+        <h2>Join the Community of Stress-Free Movers</h2>
+        <!-- Client Logos and Stats -->
+    </section>
+
+    <footer id="contact">
+        <p>Your Next Chapter Starts Today!</p>
+        <button onclick="location.href='#estimator'">Get Your Free Quote</button>
+        <button onclick="location.href='contact.html'">Speak with a Specialist</button>
+        <!-- Contact Info -->
+    </footer>
+
+    <!-- Countdown Timer and Popup Form can be added here -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<style>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+.hero-section {
+    background-image: url('moving-day.jpg');
+    height: 100vh;
+    color: white;
+}
+.cta-button {
+    background-color: #ff5722;
+}
+.scroll-cue {
+    position: absolute;
+    bottom: 20px;
+}
+.icon-grid {
+    display: flex;
+}
+.icon-item {
+    flex: 1;
+}
+.chat-button {
+    position: fixed;
+}
+.progress-bar {
+    background-color: #f3f3f3;
+}
+.progress-bar span {
+    display: block;
+    height: 5px;
+    background-color: #4caf50;
+}
+</style>
+
+<script>
+// script.js
+document.querySelector('.chat-button').addEventListener('click', function() {
+   alert('Chat feature coming soon!');
+});
