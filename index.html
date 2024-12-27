@@ -9,7 +9,7 @@
 </head>
 <body id="app" class="bg-light">
 
-    <header class="bg-dark text-white text-center py-3">
+    <header class="bg-primary text-white text-center py-4">
         <h1>Quick Delivery Service</h1>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">Home</a>
@@ -26,23 +26,25 @@
     </header>
 
     <main class="container mt-4">
-        <section id="home" class="text-center mb-4">
+        <section id="home" class="text-center mb-5">
             <h2>Welcome to Quick Delivery Service</h2>
-            <p>Imagine this: It’s a busy Friday evening. You’ve had a long week at work, and all you want is to unwind at home with your favorite meal. The thought of cooking feels exhausting, and takeout options seem overwhelming.</p>
-            <p>But wait! That’s where we come in. At Quick Delivery Service, we believe that your evenings should be filled with relaxation, not stress. Picture yourself lounging on the couch, your favorite show playing, when suddenly, there’s a knock at the door. It’s us, delivering a hot, delicious pizza or a juicy burger right to your doorstep!</p>
-            <p>Our mission is simple: to bring you the best meals from local restaurants without you having to lift a finger. We partner with top chefs and eateries to ensure that every bite is bursting with flavor and made from the freshest ingredients.</p>
-            <p>Whether you’re craving something classic or looking to try something new, our diverse menu has something for everyone. And with just a few clicks, you can place your order and let us handle the rest.</p>
-            <p>So why wait? Treat yourself to an effortless dining experience tonight. Your table is set; all you need is to choose your favorite dish and let us deliver happiness right to your door!</p>
+            <p class="lead">Imagine this: It’s a busy Friday evening. You’ve had a long week at work, and all you want is to unwind at home with your favorite meal.</p>
+            <p>But wait! That’s where we come in. At Quick Delivery Service, we believe that your evenings should be filled with relaxation, not stress.</p>
+            <div class="my-4">
+                <img src="images/delivery.jpg" alt="Food Delivery" class="img-fluid rounded shadow-lg">
+            </div>
+            <p>Picture yourself lounging on the couch, your favorite show playing, when suddenly, there’s a knock at the door. It’s us, delivering a hot, delicious pizza or a juicy burger right to your doorstep!</p>
+            <p>Our mission is simple: to bring you the best meals from local restaurants without you having to lift a finger.</p>
         </section>
 
-        <section id="products" class="mb-4">
+        <section id="products" class="mb-5">
             <h2 class="text-center">Our Products</h2>
             <div class="row">
                 <div class="col-md-4" v-for="product in products" :key="product.id">
-                    <div class="card mb-4 shadow-sm">
-                        <img :src="product.image" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>
+                    <div class="card mb-4 shadow-sm border-primary">
+                        <img :src="product.image" class="card-img-top rounded-top" alt="">
+                        <div class="card-body bg-light text-dark">
+                            <h5 class="card-title font-weight-bold">{{ product.name }}</h5>
                             <p class="card-text">{{ product.description }}</p>
                             <p class="card-text"><strong>Price: ${{ product.price }}</strong></p>
                             <button @click="selectProduct(product)" class="btn btn-primary">Order Now</button>
@@ -52,7 +54,7 @@
             </div>
         </section>
 
-        <section id="order" class="mb-4">
+        <section id="order" class="mb-5 bg-light p-4 rounded shadow-sm">
             <h2>Order Form</h2>
             <form @submit.prevent="submitOrder">
                 <div class="form-group">
@@ -62,7 +64,7 @@
 
                 <div class="form-group">
                     <label for="product">Product:</label>
-                    <input type="text" v-model.trim="selectedProduct.name" id="product" readonly class="form-control-plaintext">
+                    <input type="text" v-model.trim="selectedProduct.name" id="product" readonly class="form-control-plaintext bg-white border-0">
                 </div>
 
                 <div class="form-group">
@@ -75,9 +77,10 @@
 
             <div v-if="orderMessage" class='alert alert-info mt-3'>{{ orderMessage }}</div>
         </section>
+
     </main>
 
-    <footer class='text-center py-3'>
+    <footer class='text-center py-3 bg-primary text-white'>
         &copy; 2024 Quick Delivery Service
     </footer>
 
